@@ -4,14 +4,17 @@ import './App.css';
 function App() {
   const [seeMore, setSeeMore] = useState(false);
   let bottomContainerClass = "hideContainer";
+  let buttonText = "See more"
   function seeMoreOnClick() {
     setSeeMore(!seeMore);
   }
 
   if (seeMore) {
     bottomContainerClass = "bottomContainer";
+    buttonText = "See less"
   } else {
     let bottomContainerClass = "hideContainer";
+    buttonText = "See more"
   }
   
   return (
@@ -27,7 +30,7 @@ function App() {
            <p>
             California's water managers monitor the reservoirs carefully, and the state publishes daily data on reservoir storage.
           </p>
-           <button id="seeButton" onClick={seeMoreOnClick}>See more</button>
+           <button id="seeButton" onClick={seeMoreOnClick}>{buttonText}</button>
         </div>
 
         <div id="topRight">
