@@ -48,7 +48,7 @@ img {
   font-family: 'Inter', sans-serif;
 }
 
-#bottomContainer {
+.bottomContainer {
   margin:10px;
   display:flex;
   justify-content: space-around;
@@ -83,4 +83,8 @@ button {
     transition: 0.3s ease;
     border: none;
 /*     margin: 10px; */
+}
+
+.hideContainer {
+  display:none;
 }

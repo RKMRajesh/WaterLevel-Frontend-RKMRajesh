@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import './App.css';
 
 function App() {
+  const [seeMore, setSeeMore] = useState(false);
+  let bottomContainerClass = "hideContainer";
+  function seeMoreOnClick() {
+    setSeeMore(!seeMore);
+  }
+
+  if (seeMore) {
+    bottomContainerClass = "bottomContainer";
+  } else {
+    let bottomContainerClass = "hideContainer";
+  }
+  
   return (
     <main>
       <p className="header-p">
@@ -15,7 +27,7 @@ function App() {
            <p>
             California's water managers monitor the reservoirs carefully, and the state publishes daily data on reservoir storage.
           </p>
-           <button id="seeButton">See more</button>
+           <button id="seeButton" onClick={seeMoreOnClick}>See more</button>
         </div>
 
         <div id="topRight">
@@ -28,8 +40,7 @@ function App() {
         </div>
       </div>
       
-
-<div id="bottomContainer">
+    <div className={bottomContainerClass}>
   <div id="chart">
   </div>
   <div id="bottomRight">
@@ -38,13 +49,13 @@ function App() {
     </p>
     <div id="monthPicker">
     </div>
-  </div>
-  
+  </div> 
 </div>
-
 
     </main>
   );
 }
+
+
 
 export default App;
