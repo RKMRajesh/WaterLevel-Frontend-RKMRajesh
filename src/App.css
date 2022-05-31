@@ -1,0 +1,86 @@
+// add all CSS here!
+
+main {
+  
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+/*   color: whitesmoke; */
+  font-family: 'Inter', sans-serif;
+}
+
+.header-p {
+  background: rgb(66, 145, 152);
+  margin-top: 0px;
+  padding: 3px;
+  font-size: 28px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: 'Inter', sans-serif;
+}
+
+#topContainer {
+  margin:10px;
+  display:flex;
+/*   align-items: center; */
+  justify-content: space-around;
+}
+
+#topLeft {
+  max-width: 800px;
+  min-width: 300px;
+}
+
+#topRight {
+  display:flex;
+  flex-direction: column;
+  align-items: center
+}
+img {
+  max-width: 400px;
+}
+
+#imageCaption {
+  max-width: 400px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+#bottomContainer {
+  margin:10px;
+  display:flex;
+  justify-content: space-around;
+}
+
+#chart {
+  background:gray;
+  padding:40px;
+  min-width: 300px;
+}
+
+#bottomRight {
+  max-width: 600px;
+}
+#monthPicker {
+  background:lightpink;
+  padding: 40px;
+  max-width:300px;
+}
+
+button {
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: rgb(66, 145, 152);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+/*     margin: 10px; */
+}
