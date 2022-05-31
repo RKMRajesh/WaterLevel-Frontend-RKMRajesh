@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
+import {sendGetRequest} from './AJAX.jsx'
 
 function App() {
   const [seeMore, setSeeMore] = useState(false);
@@ -16,6 +17,16 @@ function App() {
     let bottomContainerClass = "hideContainer";
     buttonText = "See more"
   }
+
+  useEffect(initialize,[]);
+
+  function initialize() {
+    (async function () {
+      let AJAXResponse = await sendGetRequest("/query/getResponse");
+      console.log("Got the following response: ", AJAXResponse.msg);
+    }) ();
+  }
+  
   
   return (
     <main>
