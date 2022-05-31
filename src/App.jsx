@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './App.css';
 import {sendGetRequest} from './AJAX.jsx'
 
+
 function App() {
   const [seeMore, setSeeMore] = useState(false);
   let bottomContainerClass = "hideContainer";
@@ -53,10 +54,12 @@ function App() {
            
         </div>
       </div>
-      
+
+    
     <div className={bottomContainerClass}>
   <div id="chart">
   </div>
+  <myChart/>
   <div id="bottomRight">
     <p id="bottomParagraph"> 
     Here's a quick look at some of the data on reservoirs from the <a href="https://cdec.water.ca.gov/index.html">California Data Exchange Center</a>, which consolidates climate and water data from multiple federal and state government agencies, and  electric utilities.  Select a month and year to see storage levels in the eleven largest in-state reservoirs.
@@ -70,6 +73,8 @@ function App() {
   );
 }
 
-
+// function MyChart() {
+  
+// }
 
 export default App;
