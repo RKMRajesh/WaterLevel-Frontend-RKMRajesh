@@ -9,11 +9,12 @@ async function sendGetRequest(url) {
      };
 
   console.log("about to send GET request");
-  console.log(params);
+  // console.log(params);
   
   let response = await fetch(url,params);
   if (response.ok) {
     let data = await response.json();
+    console.log("data received: ", data);
     return data;
   } else {
     throw Error(response.status);

@@ -38,6 +38,7 @@ p {
   flex-direction: column;
   align-items: center
 }
+
 img {
   max-width: 400px;
 }
@@ -54,20 +55,34 @@ img {
   justify-content: space-around;
 }
 
-MyChart {
+a {
+  color: rgb(0 151 205);
+  text-decoration: none;
+  
+}
+
+/* #chart {
   background:peachpuff;
   padding:40px;
   min-width: 300px;
+} */
+
+div#chart-container {
+  position: relative;
+  margin: auto;
+  height: 40vh;
+  width: 35vw;
+  
 }
 
 #bottomRight {
   max-width: 600px;
 }
-#monthPicker {
+/* #monthPicker {
   background:lightpink;
   padding: 40px;
   max-width:300px;
-}
+} */
 
 button {
     border-radius: 10px;
